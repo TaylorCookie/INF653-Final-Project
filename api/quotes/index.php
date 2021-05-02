@@ -59,7 +59,6 @@
             array_push($quotes_arr['data'], $quote_item);
         }
 
-        //**********DISPLAY STARTS HERE*************/
         echo json_encode($quotes_arr);
 
     } else {    
