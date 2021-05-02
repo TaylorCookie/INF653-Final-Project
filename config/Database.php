@@ -5,7 +5,7 @@ class Database {
     private static $host = 'y5svr1t2r5xudqeq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
     private static $username = 'fg50z9bjvy50qzn5';
     private static $password = 'v94dvu4svni96f58';
-    private static $dbname = 'poop';//'t1v10q62hhx7ktca';
+    private static $dbname = 't1v10q62hhx7ktca';
     private static $db;
     private $conn;
 

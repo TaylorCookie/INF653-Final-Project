@@ -12,11 +12,11 @@ if(!isset($getLimitNum)) {
     $getLimitNum = 100;
 }
 
-$quotes_api_url = 'http://inf653-final-project-spr-2021.herokuapp.com/api/quotes';
+$quotes_api_url = 'http://localhost/final_prep/INF653-Final-Project/api/quotes';
 
-$categories_api_url = 'http://inf653-final-project-spr-2021.herokuapp.com/api/categories';
+$categories_api_url = 'http://localhost/final_prep/INF653-Final-Project/api/categories';
 
-$authors_api_url = 'http://inf653-final-project-spr-2021.herokuapp.com/api/authors';
+$authors_api_url = 'http://localhost/final_prep/INF653-Final-Project/api/authors';
 
 //set correct api call
 if($getAuthorId && $getCategoryId) {
