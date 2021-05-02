@@ -1,11 +1,11 @@
 <?php
 
 class Database {
-    private static $dsn = 'mysql:host=localhost;dbname=quotesdb';
-    private static $host = 'localhost';
-    private static $username = 'root';
-    private static $password = 'password';
-    private static $dbname = 'quotesdb';
+    private static $dsn = 'mysql:host=y5svr1t2r5xudqeq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;dbname=t1v10q62hhx7ktca';
+    private static $host = 'y5svr1t2r5xudqeq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com';
+    private static $username = 'fg50z9bjvy50qzn5';
+    private static $password = 'v94dvu4svni96f58';
+    private static $dbname = 't1v10q62hhx7ktca';
     private static $db;
     private $conn;
 
@@ -15,7 +15,7 @@ class Database {
 
         if (!isset(self::$db)) {
             try {
-                self::$db = new PDO(self::$dsn, self::$username, //self::$password
+                self::$db = new PDO(self::$dsn, self::$username, self::$password
                 );
             } catch (PDOException $e) {
                 $error_message = 'Database Error: ';
