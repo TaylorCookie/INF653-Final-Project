@@ -32,9 +32,8 @@ class Database {
         if (!isset(self::$db)) {
             try {
                 $this->conn = new PDO($dsn, $username, $password);
-                /*
-                self::$db = new PDO(self::$dsn, self::$username, self::$password);
-                */
+                self::$db = new PDO($dsn, $username, $password);
+                
                 
             } catch (PDOException $e) {
                 $error_message = 'Database Error: ';
