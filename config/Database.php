@@ -26,16 +26,14 @@ class Database {
         $password = $dbparts['pass'];
         $database = ltrim($dbparts['path'],'/');
         
-
         //set dsn variable
         $dsn = "mysql:host={$hostname};dbname={$database}";
 
-        $this->conn = null;
+        //$this->conn = null;
 
-        
         if (!isset(self::$db)) {
             try {
-                $this->conn = new PDO($dsn, $username, $password);
+                //$this->conn = new PDO($dsn, $username, $password);
                 self::$db = new PDO($dsn, $username, $password);
                 
                 
