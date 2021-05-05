@@ -11,7 +11,7 @@ class Database {
     */
 
     private $conn;
-    private static $db;
+    //private static $db;
 
     //DB Connect
     public function connect() {
@@ -29,20 +29,22 @@ class Database {
 
         $this->conn = null;
 
-        if (!isset(self::$db)) {
-            try {
-                $this->conn = new PDO($dsn, $username, $password);
-                self::$db = new PDO($dsn, $username, $password);
-                
-                
-            } catch (PDOException $e) {
-                $error_message = 'Database Error: ';
-                $error_message .= $e->getMessage();
-                echo $error_message;
-                exit();
-            }
+        
+        //if (!isset(self::$db)) {
+        try {
+            $this->conn = new PDO($dsn, $username, $password);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connected successfully";
+            //self::$db = new PDO($dsn, $username, $password);
+            
+            
+        } catch (PDOException $e) {
+            echo "Connection failed: " . $e->getMessage();
+            exit();
         }
-        return self::$db;
+        //}
+        return $this->conn;
+        
     }
 
 }
